@@ -7,7 +7,7 @@ const cors = require("cors");
 app.use(cors());
 
 // Middleware untuk mengizinkan akses ke gambar
-app.use("/images", express.static("images"));
+app.use("/images", express.static(__dirname + "/images"));
 
 app.use("/api", giziRoutes);
 
